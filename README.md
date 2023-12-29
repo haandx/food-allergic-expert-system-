@@ -17,16 +17,15 @@ make informed choices and reduce the risk of accidental exposure.
 making safe food choices.
 
 ## Knowledge Sources: 
-### The allergen information used in the knowledge base is based on general knowledge about common food allergens. However, specific details about allergens in food can be found in
-various authoritative sources, including:
+### The allergen information used in the knowledge base is based on general knowledge about common food allergens. However, specific details about allergens in food can be found in various authoritative sources, including:
+
 1. US Food and Drug Administration (FDA): The FDA provides information on food allergens, labeling requirements, and resources for consumers. You can visit the FDA's Food Allergens page for more details: https://www.fda.gov/food/food-ingredients-packaging/food-allergens
 2. European Food Safety Authority (EFSA): EFSA also provides information on allergens and intolerances. You can explore their website for scientific opinions and resources: https://www.efsa.europa.eu/en/topics/topic/allergens
 3. World Health Organization (WHO): The WHO may provide global perspectives on food allergens. Visit their website for relevant information: https://www.who.int/health-topics/food-allergies#tab=tab_1
 4. National Institute of Allergy and Infectious Diseases (NIAID): NIAID, part of the National Institutes of Health (NIH), provides information on food allergies and research. You can explore their resources here: https://www.niaid.nih.gov/diseases-conditions/food-allergy
 
 ## Facts:
-### Many food recipes share common basic ingredients. Providing a description related to food allergies in some dishes, for instance, "Chocolate Cake," reveals ingredients that may trigger allergies for individuals sensitive to components like eggs, milk, and gluten. These are fundamental ingredients in the majority of chocolate cake recipes. Therefore, it is essential to offer a simple database about food allergies, making it easier to comprehend food components and verify whether they contain ingredients to be avoided for those with
-specific allergies.
+### Many food recipes share common basic ingredients. Providing a description related to food allergies in some dishes, for instance, "Chocolate Cake," reveals ingredients that may trigger allergies for individuals sensitive to components like eggs, milk, and gluten. These are fundamental ingredients in the majority of chocolate cake recipes. Therefore, it is essential to offer a simple database about food allergies, making it easier to comprehend food components and verify whether they contain ingredients to be avoided for those with specific allergies.
 
 ## Rules: 
 ### 1: A rule to verify whether the product contains a specified component representing an allergen.
@@ -34,24 +33,24 @@ specific allergies.
 
 ## Test Code:
 - has_allergen(chocolate_cake, eggs) ? .
-% Test cases
+- % Test cases
 - is_safe(chocolate_cake, [eggs, milk, gluten]) ?.
-% Output should be false, as chocolate cake contains eggs.
+- % Output should be false, as chocolate cake contains eggs.
 - is_safe(peanut_butter_cookies, [peanuts, gluten]) ?.
-% Output should be false, as peanut butter cookies contain peanuts.
+- % Output should be false, as peanut butter cookies contain peanuts.
 - is_safe(seafood_pasta, [seafood, gluten]) ?.
-% Output should be false, as seafood pasta contains seafood.
+- % Output should be false, as seafood pasta contains seafood.
 - is_safe(cheese_pizza, [dairy, gluten]) ?.
-% Output should be false, as cheese pizza contains dairy.
+- % Output should be false, as cheese pizza contains dairy.
 - is_safe(veggie_wrap, [soy, gluten]) ?.
-% Output should be false, as veggie wrap contains soy.
+- % Output should be false, as veggie wrap contains soy.
 - is_safe(ice_cream, [milk, nuts]) ?.
-% Output should be false, as ice cream contains milk and nuts.
-% Test cases that should be true
+- % Output should be false, as ice cream contains milk and nuts.
+- % Test cases that should be true
 - is_safe(fruit_salad, [])?.
-% Output should be true, as fruit salad is safe for someone with no specified allergens.
+- % Output should be true, as fruit salad is safe for someone with no specified allergens.
 - is_safe(chocolate_cake, [peanuts, dairy]) ?.
-% Output should be true, as chocolate cake does not contain peanuts or dairy.
+- % Output should be true, as chocolate cake does not contain peanuts or dairy.
 - is_safe(veggie_wrap, [nuts]) ?.
 - % Output should be true, as veggie wrap does not contain nuts.
 - is_safe(seafood_pasta, [])?.
