@@ -57,3 +57,5 @@ specific allergies.
 - is_safe(seafood_pasta, [])?.
 - % Output should be true, as seafood pasta is safe for someone with no specified allergens.
 
+## Result : 
+<img src= "https://github.com/haandx/food-allergic-expert-system-/assets/142608001/44ebff0b-39c4-4aad-bb65-e784e55b4f84" width = "300">
